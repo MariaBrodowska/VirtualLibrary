@@ -8,18 +8,6 @@ find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
 
 qt_standard_project_setup()
 
-## Dodaj pliki czcionek do projektu
-#set(FONT_FILES
-#    "fonts/BrunoAce-Regular.ttf"
-#)
-
-## Skopiuj pliki czcionek do katalogu zbudowanego projektu
-#foreach(FONT_FILE ${FONT_FILES})
-#    configure_file(${FONT_FILE} ${CMAKE_CURRENT_BINARY_DIR}/${FONT_FILE} COPYONLY)
-#endforeach()
-
-#RESOURCES(
-#    fonts/BrunoAce-Regular.ttf)
 qt_add_executable(appvlibrary
     main.cpp
     ksiazka.h
@@ -30,7 +18,6 @@ qt_add_executable(appvlibrary
     szafa.cpp
     biblioteka.h
     biblioteka.cpp
-#    fonts/BrunoAce-Regular.ttf
 )
 
 qt_add_qml_module(appvlibrary
@@ -54,4 +41,3 @@ target_link_libraries(appvlibrary
 install(TARGETS appvlibrary
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
-#    fonts/BrunoAce-Regular.ttf

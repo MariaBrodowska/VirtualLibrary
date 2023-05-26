@@ -99,7 +99,6 @@ void Biblioteka::dodajKsiazkiZPliku(const string& nazwaPliku, Gatunek gatunek,Bi
     cout << numerSzafy << endl;
     cout << numerPolki << endl;
     cout << iloscKsiazekNaPolce << endl;
-
     while (getline(plik,tytul,';')) {
         getline(plik,autor);
         if (numerPolki==5 && iloscKsiazekNaPolce==10){
@@ -185,8 +184,20 @@ Q_INVOKABLE QString Biblioteka :: dodajKsiazkiZPlikuu(QString nazwaPliku, QStrin
     cout << numerSzafy << endl;
     cout << numerPolki << endl;
     cout << iloscKsiazekNaPolce << endl;
-
-    while (getline(plik,tytul,';')) {
+    for (auto& szafa : szafy) {
+        for (auto& polka : szafa.polki) {
+            if(polka.ksiazki.size() < 10){ //jesli jakas polka w istniejacej juz szafie jest niepelna to dodaje ksiazki na koniec tej poki
+            int ileKsiazek = polka.ksiazki.size();
+            while (getline(plik,tytul,';')) {
+            getline(plik,autor);
+            ileKsiazek++;
+            ileksiazek[gatunek]++;
+            Ksiazka ksiazka(tytul, autor, gatunek, tagID++,ileKsiazek);
+            getSzafa(szafa.numer).getPolka(polka.numer).dodajKsiazke(ksiazka);
+            if (ileKsiazek == 10) break;
+        }
+        }}}
+    while (getline(plik,tytul,';')) { //jesli skoncza sie wolne istniejace juz miejsca tworze nowe polki i szafy
         getline(plik,autor);
         if (numerPolki==5 && iloscKsiazekNaPolce==10){
             numerSzafy++;
@@ -277,6 +288,43 @@ Q_INVOKABLE QString Biblioteka::usunKsiazkeTytul(QString tytul,QString autor){
                         ++it;}
                 }}}
     wynik = "Nie znaleziono ksiazki o tytule: " + tytul.toStdString();
+    cout << wynik << endl;
+    QString wyn = QString::fromStdString(wynik);
+    return wyn;
+}
+Q_INVOKABLE QString Biblioteka::usunKsiazkePlik(QString sciezka){
+    cout << "Usowanie ksiazek z pliku: "<< sciezka.toStdString() << endl;
+    string wynik, sciezkaa, tytul, autor;
+    sciezkaa = sciezka.toStdString();
+    ifstream plik;
+    plik.open(sciezkaa);
+    if (!plik.is_open()) {
+        cout << "Nie udało się otworzyć pliku: " << sciezkaa << endl;
+        QString wyn = "Nie udało się otworzyć pliku:\n" + sciezka;
+        return wyn;
+        exit(0);}
+    while (getline(plik,tytul,';')) {
+        getline(plik,autor);
+        for (auto& szafa : szafy) {
+            for (auto& polka : szafa.polki) {
+                    auto it = polka.ksiazki.begin();
+                    while(it != polka.ksiazki.end()){
+                        if (it->tytul == tytul && it->autor == autor) {
+                            ileusunieto[it->gatunek]++;
+                            polka.ksiazki.erase(it);
+                            while(it != polka.ksiazki.end()){
+                                it->numer--;
+                                ++it;
+                            }
+                        }
+                        else{
+                            ++it;}
+                    }
+
+            }}
+    }
+    plik.close();
+    wynik = "Usunięto książki z pliku: \n" + sciezkaa;
     cout << wynik << endl;
     QString wyn = QString::fromStdString(wynik);
     return wyn;

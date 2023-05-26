@@ -18,11 +18,11 @@ Window {
     flags: Qt.Window
     contentOrientation: Qt.PortraitOrientation
     visibility: Window.Windowed
-    title: "Hello World"
+    title: "Virtual Library"
 
     StateGroup {
         id: stronaGlowna
-        state: "userPage"
+        state: "mainPage"
         states: [
             State {
                 name: "mainPage"
@@ -963,7 +963,7 @@ Window {
                     y: 13
                     width: 81
                     height: 29
-                    visible: true
+                    visible: false
                 }
 
                 PropertyChanges {
@@ -2828,30 +2828,30 @@ Window {
 
                 PropertyChanges {
                     target: ladowanie
-                    x: 407
-                    y: 411
+                    x: 294
+                    y: 421
                     visible: false
-                    scale: 1.4
+                    scale: 1.5
                 }
 
                 PropertyChanges {
                     target: usunKsiazkeTytul
                     x: 186
-                    y: 202
-                    width: 253
-                    height: 37
+                    y: 190
+                    width: 259
+                    height: 28
                     visible: false
                     placeholderText: qsTr("tytuł")
                     placeholderTextColor: "#aaaaff"
                     font.family: "Bruno Ace"
-                    font.pointSize: 18
+                    font.pointSize: 16
                 }
 
                 PropertyChanges {
                     target: usunPlik
                     x: 83
                     y: 252
-                    width: 475
+                    width: 468
                     height: 38
                     visible: false
                     placeholderText: qsTr("ścieżka do pliku")
@@ -2888,35 +2888,35 @@ Window {
 
                 PropertyChanges {
                     target: usunKsiazkeAutor
-                    x: 186
-                    y: 252
-                    width: 253
-                    height: 36
+                    x: 185
+                    y: 224
+                    width: 259
+                    height: 25
                     visible: false
                     placeholderText: qsTr("autor")
-                    font.pointSize: 18
+                    font.pointSize: 16
                     font.family: "Bruno Ace"
                     placeholderTextColor: "#aaaaff"
                 }
 
                 PropertyChanges {
                     target: usunKsiazkeTag
-                    x: 186
-                    y: 348
-                    width: 253
-                    height: 36
+                    x: 185
+                    y: 313
+                    width: 259
+                    height: 26
                     visible: false
                     placeholderText: qsTr("tag RFID")
                     placeholderTextColor: "#aaaaff"
-                    font.pointSize: 18
+                    font.pointSize: 16
                     font.family: "Bruno Ace"
                 }
 
                 PropertyChanges {
                     target: lub
-                    x: 247
-                    y: 318
-                    width: 127
+                    x: 185
+                    y: 281
+                    width: 259
                     height: 17
                     visible: false
                     text: qsTr("lub")
@@ -2927,18 +2927,18 @@ Window {
 
                 PropertyChanges {
                     target: comboBox
-                    x: 143
-                    y: 143
-                    width: 355
-                    height: 40
+                    x: 147
+                    y: 133
+                    width: 347
+                    height: 37
                     font.pointSize: 14
                     font.family: "Bruno Ace"
                 }
 
                 PropertyChanges {
                     target: komunikatUsunieto
-                    x: 73
-                    y: 424
+                    x: 76
+                    y: 391
                     width: 476
                     height: 32
                     visible: false
@@ -2951,7 +2951,7 @@ Window {
                 PropertyChanges {
                     target: buttonUsunPlik
                     x: 247
-                    y: 352
+                    y: 337
                     width: 134
                     height: 32
                     visible: false
@@ -2963,8 +2963,8 @@ Window {
                 PropertyChanges {
                     target: buttonUsunKsiazke
                     x: 247
-                    y: 393
-                    width: 127
+                    y: 353
+                    width: 134
                     height: 31
                     visible: false
                     text: qsTr("usuń")
@@ -2974,9 +2974,9 @@ Window {
 
                 PropertyChanges {
                     target: komunikatBlad
-                    x: 189
-                    y: 296
-                    width: 250
+                    x: 185
+                    y: 256
+                    width: 259
                     height: 16
                     visible: false
                     color: "#ff0000"
@@ -3004,6 +3004,7 @@ Window {
                     y: 12
                     width: 80
                     height: 28
+                    visible: true
                     text: qsTr("cofnij")
                     font.family: "Bruno Ace"
                 }
@@ -3011,6 +3012,558 @@ Window {
                 PropertyChanges {
                     target: tagRF
                     visible: false
+                }
+
+                PropertyChanges {
+                    target: bladDodajPage1
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: buttonDodajPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: userPageAdminPage
+                    visible: false
+                }
+            },
+
+            State {
+                name: "wyswietlZawartosc"
+                PropertyChanges {
+                    target: name
+                    y: 62
+                    width: 352
+                    height: 48
+                    text: qsTr("Virtual Library")
+                    font.pixelSize: 35
+                    Layout.minimumHeight: 0
+                    Layout.columnSpan: 1
+                    Layout.preferredHeight: "-1"
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
+                    anchors.horizontalCenterOffset: "-5"
+                    Layout.topMargin: 150
+                    Layout.fillWidth: true
+                }
+
+                PropertyChanges {
+                    target: rectangle1
+                    x: 0
+                    y: 0
+                    width: 640
+                    height: 480
+                    color: "#aaaaff"
+                }
+
+                PropertyChanges {
+                    target: window
+                    width: 640
+                    height: 480
+                    modality: Qt.ApplicationModal
+                    maximumWidth: 42871
+                    flags: Qt.Window
+                    maximumHeight: 7080
+                }
+
+                PropertyChanges {
+                    target: haslo
+                    x: 166
+                    y: 267
+                    width: 307
+                    height: 36
+                    visible: false
+                    font.pixelSize: 25
+                    font.family: "Bruno Ace"
+                    echoMode: TextInput.Password
+                    placeholderText: qsTr("hasło")
+                    overwriteMode: true
+                    font.italic: false
+                    font.pointSize: 25
+                    passwordCharacter: qsTr("●")
+                }
+
+                PropertyChanges {
+                    target: user
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: admin
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textEdit
+                    x: 140
+                    y: 335
+                    width: 296
+                    height: 70
+                }
+
+                PropertyChanges {
+                    target: haslo
+                    x: 163
+                    y: 268
+                    width: 298
+                    height: 29
+                }
+
+                PropertyChanges {
+                    target: login
+                    x: 166
+                    y: 195
+                    width: 298
+                    height: 29
+                    visible: false
+                    font.family: "Bruno Ace"
+                    placeholderText: qsTr("login")
+                    font.italic: false
+                    font.pointSize: 25
+                }
+
+                PropertyChanges {
+                    target: loginPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: bladLogowania
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: zaloguj
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyszukajTagu
+                    x: 75
+                    y: 238
+                    width: 198
+                    height: 52
+                    visible: false
+                    text: qsTr("po tagu RFID")
+                    font.family: "Bruno Ace"
+                    font.pointSize: 15
+                }
+
+                PropertyChanges {
+                    target: wyszukajTytule
+                    x: 342
+                    y: 238
+                    width: 198
+                    height: 52
+                    visible: false
+                    text: qsTr("po tytule")
+                    font.family: "Bruno Ace"
+                    font.pointSize: 15
+                }
+
+                PropertyChanges {
+                    target: wyszukaj
+                    x: 255
+                    y: 157
+                    width: 131
+                    height: 27
+                    visible: false
+                    text: qsTr("Wyszukaj")
+                    font.pixelSize: 23
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: wynik
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: przyciskSzukaj
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: tagRFID
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: cofinijDoGlownej1
+                    x: 12
+                    y: 12
+                    width: 80
+                    height: 28
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: userPageMainPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: text1
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: tytul
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: przyciskSzukaj1
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: cofnijDoWyszukajPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: text2
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: buttonWyszukaj
+                    x: 75
+                    y: 168
+                    width: 209
+                    height: 55
+                    visible: false
+                    text: qsTr("wyszukaj")
+                    font.family: "Bruno Ace"
+                    font.pointSize: 16
+                }
+
+                PropertyChanges {
+                    target: buttonWyswietl
+                    x: 342
+                    y: 168
+                    width: 209
+                    height: 55
+                    visible: false
+                    text: qsTr("wyświetl zawartość")
+                    font.family: "Bruno Ace"
+                    font.pointSize: 12
+                }
+
+                PropertyChanges {
+                    target: buttonDodaj
+                    x: 75
+                    y: 266
+                    width: 209
+                    height: 55
+                    visible: false
+                    text: qsTr("Button")
+                    font.family: "Bruno Ace"
+                    font.pointSize: 16
+                }
+
+                PropertyChanges {
+                    target: buttonUsun
+                    x: 342
+                    y: 266
+                    width: 209
+                    height: 55
+                    visible: false
+                    text: qsTr("usuń")
+                    font.family: "Bruno Ace"
+                    font.pointSize: 16
+                }
+
+                PropertyChanges {
+                    target: gatunki
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: biografia
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: horror
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: przygodowa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: romans
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: fantasy
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: kryminal
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: historyczna
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: mlodziezowa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: swipeView
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: text3
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: cofnijDoDodajPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: dodaj
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: text4
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: sciezka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: ladowanie1
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: ladowanie
+                    x: 294
+                    y: 421
+                    visible: false
+                    scale: 1.5
+                }
+
+                PropertyChanges {
+                    target: usunKsiazkeTytul
+                    x: 186
+                    y: 190
+                    width: 259
+                    height: 28
+                    visible: false
+                    font.family: "Bruno Ace"
+                    placeholderText: qsTr("tytuł")
+                    placeholderTextColor: "#aaaaff"
+                    font.pointSize: 16
+                }
+
+                PropertyChanges {
+                    target: usunPlik
+                    x: 83
+                    y: 252
+                    width: 468
+                    height: 38
+                    visible: false
+                    font.family: "Bruno Ace"
+                    placeholderText: qsTr("ścieżka do pliku")
+                    placeholderTextColor: "#aaaaff"
+                    font.pointSize: 18
+                }
+
+                PropertyChanges {
+                    target: textPlik
+                    x: 345
+                    y: 143
+                    width: 226
+                    height: 35
+                    visible: false
+                    text: qsTr("usuń plik z książkami (.csv)")
+                    font.pixelSize: 16
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: textKsiazke
+                    x: 439
+                    y: 308
+                    width: 252
+                    height: 35
+                    visible: false
+                    text: qsTr("usuń ksiażkę")
+                    font.pixelSize: 16
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: usunKsiazkeAutor
+                    x: 185
+                    y: 224
+                    width: 259
+                    height: 25
+                    visible: false
+                    font.family: "Bruno Ace"
+                    placeholderText: qsTr("autor")
+                    placeholderTextColor: "#aaaaff"
+                    font.pointSize: 16
+                }
+
+                PropertyChanges {
+                    target: usunKsiazkeTag
+                    x: 185
+                    y: 313
+                    width: 259
+                    height: 26
+                    visible: false
+                    font.family: "Bruno Ace"
+                    placeholderText: qsTr("tag RFID")
+                    placeholderTextColor: "#aaaaff"
+                    font.pointSize: 16
+                }
+
+                PropertyChanges {
+                    target: lub
+                    x: 185
+                    y: 281
+                    width: 259
+                    height: 17
+                    visible: false
+                    text: qsTr("lub")
+                    font.pixelSize: 16
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: comboBox
+                    x: 147
+                    y: 133
+                    width: 347
+                    height: 37
+                    visible: false
+                    font.family: "Bruno Ace"
+                    font.pointSize: 14
+                }
+
+                PropertyChanges {
+                    target: komunikatUsunieto
+                    x: 76
+                    y: 391
+                    width: 476
+                    height: 32
+                    visible: false
+                    text: qsTr("text")
+                    font.pixelSize: 16
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: buttonUsunPlik
+                    x: 247
+                    y: 337
+                    width: 134
+                    height: 32
+                    visible: false
+                    text: qsTr("usuń")
+                    font.family: "Bruno Ace"
+                    font.pointSize: 12
+                }
+
+                PropertyChanges {
+                    target: buttonUsunKsiazke
+                    x: 247
+                    y: 353
+                    width: 134
+                    height: 31
+                    visible: false
+                    text: qsTr("usuń")
+                    font.family: "Bruno Ace"
+                    font.pointSize: 12
+                }
+
+                PropertyChanges {
+                    target: komunikatBlad
+                    x: 185
+                    y: 256
+                    width: 259
+                    height: 16
+                    visible: false
+                    color: "#ff0000"
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: komunikatBladPliku
+                    x: 86
+                    y: 304
+                    width: 457
+                    height: 17
+                    visible: false
+                    color: "#ff0404"
+                    text: qsTr("")
+                    font.pixelSize: 14
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: usunPage
+                    x: 12
+                    y: 12
+                    width: 80
+                    height: 28
+                    visible: true
+                    text: qsTr("cofnij")
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: tagRF
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: bladDodajPage1
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: buttonDodajPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: userPageAdminPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: listView
+                    x: 451
+                    y: 138
                 }
             },
 
@@ -4064,6 +4617,7 @@ Window {
             Connections {
                 target: user
                 onClicked: {
+                    ktorastrona = "user"
                     stronaGlowna.state = "userPage"
                     userPageAdminPage.visible = false
                     userPageMainPage.visible = true
@@ -4148,7 +4702,7 @@ Window {
             onClicked: stronaGlowna.state = "mainPage"
         }
     }
-
+    property string ktorastrona
     Button {
         id: wyszukajTagu
         x: 145
@@ -4293,7 +4847,10 @@ Window {
 
         Connections {
             target: cofnijDoWyszukajPage
-            onClicked: stronaGlowna.state = "userPage"
+            onClicked: {
+                stronaGlowna.state = "userPage"
+                strona()
+            }
         }
     }
 
@@ -4307,6 +4864,7 @@ Window {
             stronaGlowna.state = "userPage"
             userPageAdminPage.visible = true
             userPageMainPage.visible = false
+            ktorastrona = "admin"
         }
     }
 
@@ -4644,6 +5202,7 @@ Window {
                 buttonUsunKsiazke.visible = false
                 komunikatBlad.visible = false
                 komunikatBladPliku.visible = false
+                komunikatUsunieto.visible = false
             }
             else if (currentIndex === 1){
                 usunKsiazkeAutor.visible = false
@@ -4655,6 +5214,7 @@ Window {
                 buttonUsunKsiazke.visible = false
                 komunikatBlad.visible = false
                 komunikatBladPliku.visible = false
+                komunikatUsunieto.visible = false
             }
             else {
                 usunKsiazkeAutor.visible = true
@@ -4666,6 +5226,7 @@ Window {
                 buttonUsunKsiazke.visible = true
                 komunikatBlad.visible = false
                 komunikatBladPliku.visible = false
+                komunikatUsunieto.visible = false
             }
         }
     }
@@ -4690,6 +5251,18 @@ Window {
         onTriggered: {
             ladowanie.visible = false
             var result = biblioteka.usunKsiazkeTag(usunKsiazkeTag.text)
+            komunikatUsunieto.text = result
+        }
+    }
+
+    Timer {
+        id: timer3
+        interval: 2000
+        running: false
+        repeat: false
+        onTriggered: {
+            ladowanie.visible = false
+            var result = biblioteka.usunKsiazkePlik(usunPlik.text)
             komunikatUsunieto.text = result
         }
     }
@@ -4745,10 +5318,34 @@ Window {
 
         Connections {
             target: tagRF
-            onClicked: stronaGlowna.state = "userPage"
+            onClicked: {
+                stronaGlowna.state = "userPage"
+                strona()
+            }
         }
     }
 
+    StateGroup {
+        id: stateGroup
+        states: [
+            State {
+                name: "State1"
+            }
+        ]
+    }
+
+
+
+    function strona(){
+        if(ktorastrona === "user"){
+            userPageMainPage.visible = true
+            userPageAdminPage.visible = false
+        }
+        else{
+            userPageAdminPage.visible = true
+            userPageMainPage.visible = false
+        }
+    }
 
     function usunPlikKsiazek(){
         if (usunPlik.text === ""){
@@ -4756,8 +5353,10 @@ Window {
             komunikatBladPliku.visible = true
         }
         else{
-        komunikatUsunieto.text = biblioteka()
-        komunikatUsunieto.visible = true
+            komunikatUsunieto.text = "Trwa usuwanie"
+            ladowanie.visible = true
+            komunikatUsunieto.visible = true
+            timer3.start()
         }
     }
 
@@ -4800,10 +5399,10 @@ Window {
             bladDodajPage1.visible = true
         }
         else{
-        ladowanie.visible = true
-        text4.text = "Trwa dodawanie książek z pliku: \n" + sciezka.text
-        text4.visible = true
-        delaytimer.start()}
+            ladowanie.visible = true
+            text4.text = "Trwa dodawanie książek z pliku: \n" + sciezka.text
+            text4.visible = true
+            delaytimer.start()}
     }
 }
 

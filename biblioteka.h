@@ -25,6 +25,7 @@ public:
     Q_INVOKABLE QString dodajKsiazkiZPlikuu(QString nazwaPliku, QString gatunek);
     Q_INVOKABLE QString usunKsiazkeTag(int tagID);
     Q_INVOKABLE QString usunKsiazkeTytul(QString tytul,QString adres);
+    Q_INVOKABLE QString usunKsiazkePlik(QString sciezka);
 signals:
    // void wynikChanged();
 public slots:
