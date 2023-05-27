@@ -12,8 +12,6 @@ using namespace std;
 class Biblioteka: public QObject
 {
     Q_OBJECT
-    //Q_INVOKABLE string getwynik() const { return wynik;}
-   // Q_PROPERTY(int wynik MEMBER wynik NOTIFY wynikChanged)
 public:
     explicit Biblioteka(QObject *parent = nullptr);
     vector<Szafa> szafy;
@@ -26,6 +24,7 @@ public:
     Q_INVOKABLE QString usunKsiazkeTag(int tagID);
     Q_INVOKABLE QString usunKsiazkeTytul(QString tytul,QString adres);
     Q_INVOKABLE QString usunKsiazkePlik(QString sciezka);
+    Q_INVOKABLE QStringList wyswietlZawartosc(int nrS, int nrP, int nrK);
 signals:
    // void wynikChanged();
 public slots:

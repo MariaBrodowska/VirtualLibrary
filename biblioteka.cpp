@@ -329,3 +329,22 @@ Q_INVOKABLE QString Biblioteka::usunKsiazkePlik(QString sciezka){
     QString wyn = QString::fromStdString(wynik);
     return wyn;
 }
+Q_INVOKABLE QStringList Biblioteka::wyswietlZawartosc(int nrS, int nrP, int nrK){
+    bool ws,wp,wk;
+    if (nrS==0) ws = true;
+    if (nrP==0) wp = true;
+    if (nrK==0) wk = true;
+    QStringList listaWynikow;
+    for (const auto& szafa : szafy) {
+        for (const auto& polka : szafa.polki) {
+            for (const auto& ksiazka : polka.ksiazki) {
+                if (ws==true) nrS=szafa.numer;
+                if (wp==true) nrP=polka.numer;
+                if (wk==true) nrK=ksiazka.numer;
+                if (nrS==szafa.numer && nrP==polka.numer && nrK==ksiazka.numer) {
+                        QString element = QString::fromStdString(ksiazka.tytul + " " + ksiazka.autor + "\ntag RFID: " + to_string(ksiazka.tagID) + " s: " + to_string(szafa.numer) + ", p: " + to_string(polka.numer) + ", k: " +to_string(ksiazka.numer));
+                    listaWynikow.append(element);
+                }
+            }}}
+    return listaWynikow;
+}

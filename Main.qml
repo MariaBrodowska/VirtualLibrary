@@ -376,6 +376,55 @@ Window {
                     target: tagRF
                     visible: false
                 }
+
+                PropertyChanges {
+                    target: spinPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: listView
+                    x: -114
+                    y: 125
+                    width: 46
+                    height: 32
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlUserPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlAdminPage
+                    visible: false
+                }
             },
             State {
                 name: "loginPage"
@@ -385,14 +434,15 @@ Window {
                     y: 62
                     width: 352
                     height: 48
-                    text: qsTr("Virtual Library")
                     font.pixelSize: 35
-                    Layout.minimumHeight: 0
-                    Layout.columnSpan: 1
+                    textFormat: Text.RichText
+                    font.family: "Bruno Ace"
+                    anchors.horizontalCenterOffset: -5
                     Layout.topMargin: 150
+                    Layout.minimumHeight: 0
+                    Layout.preferredHeight: -1
+                    Layout.columnSpan: 1
                     Layout.fillWidth: true
-                    anchors.horizontalCenterOffset: "-5"
-                    Layout.preferredHeight: "-1"
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
                 }
 
@@ -791,6 +841,53 @@ Window {
                     target: tagRF
                     visible: false
                 }
+
+                PropertyChanges {
+                    target: spinPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlUserPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: listView
+                    x: -157
+                    y: 100
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlAdminPage
+                    visible: false
+                }
             },
             State {
                 name: "userPage"
@@ -799,14 +896,15 @@ Window {
                     y: 62
                     width: 352
                     height: 48
-                    text: qsTr("Virtual Library")
                     font.pixelSize: 35
-                    anchors.horizontalCenterOffset: "-5"
-                    Layout.fillWidth: true
-                    Layout.columnSpan: 1
+                    textFormat: Text.RichText
+                    font.family: "Bruno Ace"
+                    anchors.horizontalCenterOffset: -5
                     Layout.topMargin: 150
-                    Layout.preferredHeight: "-1"
                     Layout.minimumHeight: 0
+                    Layout.preferredHeight: -1
+                    Layout.columnSpan: 1
+                    Layout.fillWidth: true
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
                 }
 
@@ -902,9 +1000,9 @@ Window {
 
                 PropertyChanges {
                     target: wyszukajTagu
-                    x: 75
-                    y: 238
-                    width: 198
+                    x: 88
+                    y: 224
+                    width: 204
                     height: 52
                     text: qsTr("po tagu RFID")
                     font.pointSize: 15
@@ -913,9 +1011,9 @@ Window {
 
                 PropertyChanges {
                     target: wyszukajTytule
-                    x: 342
-                    y: 238
-                    width: 198
+                    x: 341
+                    y: 224
+                    width: 203
                     height: 52
                     text: qsTr("po tytule")
                     font.pointSize: 15
@@ -924,13 +1022,15 @@ Window {
 
                 PropertyChanges {
                     target: wyszukaj
-                    x: 255
-                    y: 157
-                    width: 131
+                    x: 251
+                    y: 152
+                    width: 141
                     height: 27
-                    text: qsTr("Wyszukaj")
                     font.pixelSize: 23
+                    horizontalAlignment: Text.AlignHCenter
+                    textFormat: Text.RichText
                     font.family: "Bruno Ace"
+                    text: qsTr("Wyszukaj")
                 }
 
                 PropertyChanges {
@@ -963,7 +1063,7 @@ Window {
                     y: 13
                     width: 81
                     height: 29
-                    visible: false
+                    visible: true
                 }
 
                 PropertyChanges {
@@ -993,7 +1093,14 @@ Window {
 
                 PropertyChanges {
                     target: buttonWyswietl
-                    visible: false
+                    x: 88
+                    y: 308
+                    width: 456
+                    height: 52
+                    visible: true
+                    text: qsTr("wyświetl zawartość")
+                    font.pointSize: 14
+                    font.family: "Bruno Ace"
                 }
 
                 PropertyChanges {
@@ -1197,6 +1304,515 @@ Window {
                     target: tagRF
                     visible: false
                 }
+
+                PropertyChanges {
+                    target: spinPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlUserPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: listView
+                    x: -142
+                    y: 110
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlAdminPage
+                    visible: false
+                }
+            },
+
+            State {
+                name: "userPage1"
+                PropertyChanges {
+                    target: name
+                    y: 62
+                    width: 352
+                    height: 48
+                    font.pixelSize: 35
+                    textFormat: Text.RichText
+                    font.family: "Bruno Ace"
+                    anchors.horizontalCenterOffset: -5
+                    Layout.topMargin: 150
+                    Layout.minimumHeight: 0
+                    Layout.preferredHeight: -1
+                    Layout.columnSpan: 1
+                    Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
+                }
+
+                PropertyChanges {
+                    target: rectangle1
+                    x: 0
+                    y: 0
+                    width: 640
+                    height: 480
+                    color: "#aaaaff"
+                }
+
+                PropertyChanges {
+                    target: window
+                    width: 640
+                    height: 480
+                    modality: Qt.ApplicationModal
+                    maximumWidth: 42871
+                    maximumHeight: 7080
+                    flags: Qt.Window
+                }
+
+                PropertyChanges {
+                    target: haslo
+                    x: 166
+                    y: 267
+                    width: 307
+                    height: 36
+                    visible: false
+                    font.pixelSize: 25
+                    passwordCharacter: qsTr("●")
+                    overwriteMode: true
+                    echoMode: TextInput.Password
+                    placeholderText: qsTr("hasło")
+                    font.family: "Bruno Ace"
+                    font.italic: false
+                    font.pointSize: 25
+                }
+
+                PropertyChanges {
+                    target: user
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: admin
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textEdit
+                    x: 140
+                    y: 335
+                    width: 296
+                    height: 70
+                }
+
+                PropertyChanges {
+                    target: haslo
+                    x: 163
+                    y: 268
+                    width: 298
+                    height: 29
+                }
+
+                PropertyChanges {
+                    target: login
+                    x: 166
+                    y: 195
+                    width: 298
+                    height: 29
+                    visible: false
+                    placeholderText: qsTr("login")
+                    font.family: "Bruno Ace"
+                    font.italic: false
+                    font.pointSize: 25
+                }
+
+                PropertyChanges {
+                    target: loginPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: bladLogowania
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: zaloguj
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyszukajTagu
+                    x: 75
+                    y: 219
+                    width: 198
+                    height: 52
+                    text: qsTr("po tagu RFID")
+                    font.family: "Bruno Ace"
+                    font.pointSize: 15
+                }
+
+                PropertyChanges {
+                    target: wyszukajTytule
+                    x: 359
+                    y: 219
+                    width: 198
+                    height: 52
+                    text: qsTr("po tytule")
+                    font.family: "Bruno Ace"
+                    font.pointSize: 15
+                }
+
+                PropertyChanges {
+                    target: wyszukaj
+                    x: 251
+                    y: 152
+                    width: 141
+                    height: 27
+                    text: qsTr("Wyszukaj")
+                    font.pixelSize: 23
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: wynik
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: przyciskSzukaj
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: tagRFID
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: cofinijDoGlownej1
+                    x: 12
+                    y: 12
+                    width: 80
+                    height: 28
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: userPageMainPage
+                    x: 14
+                    y: 13
+                    width: 81
+                    height: 29
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: text1
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: tytul
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: przyciskSzukaj1
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: cofnijDoWyszukajPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: text2
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: buttonWyswietl
+                    x: 188
+                    y: 318
+                    width: 265
+                    height: 52
+                    visible: false
+                    text: qsTr("wyświetl zawartość")
+                    font.family: "Bruno Ace"
+                    font.pointSize: 14
+                }
+
+                PropertyChanges {
+                    target: buttonDodaj
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: buttonUsun
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: gatunki
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: buttonWyszukaj
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: przygodowa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: fantasy
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: kryminal
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: biografia
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: mlodziezowa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: horror
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: historyczna
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: romans
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: swipeView
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: text3
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: cofnijDoDodajPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: dodaj
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: text4
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: sciezka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: ladowanie1
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: ladowanie
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: userPageAdminPage
+                    x: 12
+                    y: 12
+                    width: 83
+                    height: 24
+                    visible: true
+                    text: qsTr("cofnij")
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: usunKsiazkeTytul
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: usunPlik
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: usunKsiazkeAutor
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: usunKsiazkeTag
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: lub
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: komunikatUsunieto
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: buttonUsunPlik
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: buttonUsunKsiazke
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: komunikatBlad
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: komunikatBladPliku
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textKsiazke
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: comboBox
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: bladDodajPage1
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: buttonDodajPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textPlik
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: usunPage
+                    x: 12
+                    y: 87
+                    width: 77
+                    height: 28
+                    visible: false
+                    text: qsTr("cofnij")
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: tagRF
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlUserPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: listView
+                    x: -142
+                    y: 110
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlAdminPage
+                    visible: false
+                }
             },
 
             State {
@@ -1206,15 +1822,16 @@ Window {
                     y: 62
                     width: 352
                     height: 48
-                    text: qsTr("Virtual Library")
                     font.pixelSize: 35
+                    textFormat: Text.RichText
+                    font.family: "Bruno Ace"
+                    anchors.horizontalCenterOffset: -5
+                    Layout.topMargin: 150
+                    Layout.minimumHeight: 0
+                    Layout.preferredHeight: -1
                     Layout.columnSpan: 1
                     Layout.fillWidth: true
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
-                    anchors.horizontalCenterOffset: "-5"
-                    Layout.preferredHeight: "-1"
-                    Layout.minimumHeight: 0
-                    Layout.topMargin: 150
                 }
 
                 PropertyChanges {
@@ -1628,6 +2245,53 @@ Window {
                     text: qsTr("cofnij")
                     font.family: "Bruno Ace"
                 }
+
+                PropertyChanges {
+                    target: spinPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlUserPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: listView
+                    x: -174
+                    y: 110
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlAdminPage
+                    visible: false
+                }
             },
 
             State {
@@ -1637,14 +2301,15 @@ Window {
                     y: 62
                     width: 352
                     height: 48
-                    text: qsTr("Virtual Library")
                     font.pixelSize: 35
-                    anchors.horizontalCenterOffset: "-5"
-                    Layout.minimumHeight: 0
+                    textFormat: Text.RichText
+                    font.family: "Bruno Ace"
+                    anchors.horizontalCenterOffset: -5
                     Layout.topMargin: 150
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: "-1"
+                    Layout.minimumHeight: 0
+                    Layout.preferredHeight: -1
                     Layout.columnSpan: 1
+                    Layout.fillWidth: true
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
                 }
 
@@ -2081,6 +2746,53 @@ Window {
                     target: tagRF
                     visible: false
                 }
+
+                PropertyChanges {
+                    target: spinPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlUserPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: listView
+                    x: -130
+                    y: 125
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlAdminPage
+                    visible: false
+                }
             },
 
             State {
@@ -2090,14 +2802,15 @@ Window {
                     y: 62
                     width: 352
                     height: 48
-                    text: qsTr("Virtual Library")
                     font.pixelSize: 35
-                    anchors.horizontalCenterOffset: "-5"
-                    Layout.minimumHeight: 0
+                    textFormat: Text.RichText
+                    font.family: "Bruno Ace"
+                    anchors.horizontalCenterOffset: -5
                     Layout.topMargin: 150
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: "-1"
+                    Layout.minimumHeight: 0
+                    Layout.preferredHeight: -1
                     Layout.columnSpan: 1
+                    Layout.fillWidth: true
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
                 }
 
@@ -2248,6 +2961,7 @@ Window {
                     y: 12
                     width: 80
                     height: 28
+                    text: qsTr("wyloguj")
                 }
 
                 PropertyChanges {
@@ -2498,6 +3212,53 @@ Window {
                     target: tagRF
                     visible: false
                 }
+
+                PropertyChanges {
+                    target: spinPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlUserPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: listView
+                    x: -130
+                    y: 145
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlAdminPage
+                    visible: false
+                }
             },
 
             State {
@@ -2507,15 +3268,16 @@ Window {
                     y: 62
                     width: 352
                     height: 48
-                    text: qsTr("Virtual Library")
                     font.pixelSize: 35
-                    anchors.horizontalCenterOffset: "-5"
-                    Layout.columnSpan: 1
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
+                    textFormat: Text.RichText
+                    font.family: "Bruno Ace"
+                    anchors.horizontalCenterOffset: -5
                     Layout.topMargin: 150
                     Layout.minimumHeight: 0
-                    Layout.preferredHeight: "-1"
+                    Layout.preferredHeight: -1
+                    Layout.columnSpan: 1
                     Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
                 }
 
                 PropertyChanges {
@@ -3028,6 +3790,53 @@ Window {
                     target: userPageAdminPage
                     visible: false
                 }
+
+                PropertyChanges {
+                    target: spinPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlUserPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: listView
+                    x: -147
+                    y: 91
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlAdminPage
+                    visible: false
+                }
             },
 
             State {
@@ -3037,15 +3846,16 @@ Window {
                     y: 62
                     width: 352
                     height: 48
-                    text: qsTr("Virtual Library")
                     font.pixelSize: 35
-                    Layout.minimumHeight: 0
-                    Layout.columnSpan: 1
-                    Layout.preferredHeight: "-1"
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
-                    anchors.horizontalCenterOffset: "-5"
+                    textFormat: Text.RichText
+                    font.family: "Bruno Ace"
+                    anchors.horizontalCenterOffset: -5
                     Layout.topMargin: 150
+                    Layout.minimumHeight: 0
+                    Layout.preferredHeight: -1
+                    Layout.columnSpan: 1
                     Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
                 }
 
                 PropertyChanges {
@@ -3092,14 +3902,6 @@ Window {
                 PropertyChanges {
                     target: admin
                     visible: false
-                }
-
-                PropertyChanges {
-                    target: textEdit
-                    x: 140
-                    y: 335
-                    width: 296
-                    height: 70
                 }
 
                 PropertyChanges {
@@ -3173,12 +3975,6 @@ Window {
                     font.pixelSize: 23
                     font.family: "Bruno Ace"
                 }
-
-                PropertyChanges {
-                    target: wynik
-                    visible: false
-                }
-
                 PropertyChanges {
                     target: przyciskSzukaj
                     visible: false
@@ -3350,12 +4146,6 @@ Window {
                     target: sciezka
                     visible: false
                 }
-
-                PropertyChanges {
-                    target: ladowanie1
-                    visible: false
-                }
-
                 PropertyChanges {
                     target: ladowanie
                     x: 294
@@ -3535,7 +4325,7 @@ Window {
                     y: 12
                     width: 80
                     height: 28
-                    visible: true
+                    visible: false
                     text: qsTr("cofnij")
                     font.family: "Bruno Ace"
                 }
@@ -3562,8 +4352,103 @@ Window {
 
                 PropertyChanges {
                     target: listView
-                    x: 451
-                    y: 138
+                    x: 188
+                    y: 147
+                    width: 429
+                    height: 294
+                    flickableDirection: Flickable.HorizontalAndVerticalFlick
+                    synchronousDrag: false
+                    antialiasing: true
+                    activeFocusOnTab: false
+                    focus: false
+                    highlightRangeMode: ListView.ApplyRange
+                    keyNavigationWraps: true
+                    cacheBuffer: 320
+                    spacing: 5
+                    snapMode: ListView.NoSnap
+                    layoutDirection: Qt.RightToLeft
+                    orientation: ListView.Vertical
+                    visible: true
+                }
+
+                PropertyChanges {
+                    target: spinPolka
+                    x: 18
+                    y: 256
+                    width: 155
+                    height: 30
+                }
+
+                PropertyChanges {
+                    target: spinKsiazka
+                    x: 18
+                    y: 339
+                    width: 155
+                    height: 30
+                }
+
+                PropertyChanges {
+                    target: textSzafa
+                    x: 18
+                    y: 143
+                    width: 155
+                    height: 22
+                    text: qsTr("numer szafy")
+                    font.pixelSize: 14
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: textPolka
+                    x: 18
+                    y: 235
+                    width: 155
+                    height: 17
+                    text: qsTr("numer półki")
+                    font.pixelSize: 14
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: textKsiazka
+                    x: 18
+                    y: 317
+                    width: 155
+                    height: 17
+                    text: qsTr("numer książki")
+                    font.pixelSize: 14
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: wyswietlUserPage
+                    x: 12
+                    y: 12
+                    width: 80
+                    height: 28
+                    text: qsTr("cofnij")
+                    font.family: "Bruno Ace"
+                }
+
+                PropertyChanges {
+                    target: spinSzafa
+                    x: 18
+                    y: 168
+                    width: 155
+                    height: 29
+                }
+
+                PropertyChanges {
+                    target: wyswietlAdminPage
+                    x: 12
+                    y: 12
+                    width: 80
+                    height: 28
+                    text: qsTr("cofnij")
+                    font.family: "Bruno Ace"
                 }
             },
 
@@ -3574,14 +4459,15 @@ Window {
                     y: 62
                     width: 352
                     height: 48
-                    text: qsTr("Virtual Library")
                     font.pixelSize: 35
-                    anchors.horizontalCenterOffset: "-5"
-                    Layout.minimumHeight: 0
+                    textFormat: Text.RichText
+                    font.family: "Bruno Ace"
+                    anchors.horizontalCenterOffset: -5
                     Layout.topMargin: 150
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: "-1"
+                    Layout.minimumHeight: 0
+                    Layout.preferredHeight: -1
                     Layout.columnSpan: 1
+                    Layout.fillWidth: true
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
                 }
 
@@ -4050,6 +4936,53 @@ Window {
                     target: tagRF
                     visible: false
                 }
+
+                PropertyChanges {
+                    target: spinPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlUserPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: listView
+                    x: -144
+                    y: 91
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlAdminPage
+                    visible: false
+                }
             },
 
             State {
@@ -4059,14 +4992,15 @@ Window {
                     y: 62
                     width: 352
                     height: 48
-                    text: qsTr("Virtual Library")
                     font.pixelSize: 35
-                    anchors.horizontalCenterOffset: "-5"
-                    Layout.minimumHeight: 0
+                    textFormat: Text.RichText
+                    font.family: "Bruno Ace"
+                    anchors.horizontalCenterOffset: -5
                     Layout.topMargin: 150
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: "-1"
+                    Layout.minimumHeight: 0
+                    Layout.preferredHeight: -1
                     Layout.columnSpan: 1
+                    Layout.fillWidth: true
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
                 }
 
@@ -4576,10 +5510,57 @@ Window {
                     target: tagRF
                     visible: false
                 }
+
+                PropertyChanges {
+                    target: spinPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textPolka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: textKsiazka
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlUserPage
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: spinSzafa
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: listView
+                    x: -130
+                    y: 110
+                    visible: false
+                }
+
+                PropertyChanges {
+                    target: wyswietlAdminPage
+                    visible: false
+                }
             },
 
             State {
-                name: "dffg"
+
             }]
     }
     
@@ -4614,28 +5595,21 @@ Window {
             x: 94
             y: 195
             text: qsTr("Button")
-            Connections {
-                target: user
-                onClicked: {
-                    ktorastrona = "user"
-                    stronaGlowna.state = "userPage"
-                    userPageAdminPage.visible = false
-                    userPageMainPage.visible = true
-                }
-            }
-        }
+            onClicked: {
+                ktorastrona = "user"
+                stronaGlowna.state = "userPage"
+            }}
 
         Button {
             id: admin
             x: 356
             y: 195
             text: qsTr("Button")
-
-            Connections {
-                target: admin
-                onClicked: stronaGlowna.state = "loginPage"
+            onClicked: {
+                stronaGlowna.state = "loginPage"
+                ktorastrona = "admin"
             }
-        }
+            }
 
         TextField {
             id: login
@@ -4664,22 +5638,23 @@ Window {
                 if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter){
                     zaloguj.clicked()
                 }
-            }}
+            }
+        }
 
         Button {
             id: zaloguj
             x: 278
             y: 333
             text: qsTr("zaloguj")
-            Connections {
-                target: zaloguj
-                onClicked:
-                    if (login.text==="admin" && haslo.text==="admin"){
-                        stronaGlowna.state = "adminPage"}
-                    else{
-                        bladLogowania.visible=true;
-                    }
-            }
+            onClicked:{
+                if (login.text==="admin" && haslo.text==="admin"){
+                    stronaGlowna.state = "adminPage"
+                    login.text = ""
+                    haslo.text = ""
+                }
+                else{
+                    bladLogowania.visible=true;
+                }}
         }
     }
     Text {
@@ -4697,22 +5672,20 @@ Window {
         x: 97
         y: 145
         text: qsTr("cofnij")
-        Connections {
-            target: loginPage
-            onClicked: stronaGlowna.state = "mainPage"
+        onClicked: {
+            stronaGlowna.state = "mainPage"
+            login.text= ""
+            haslo.text= ""
         }
     }
-    property string ktorastrona
+property string ktorastrona
+//    property string wyswietlzawartosc
     Button {
         id: wyszukajTagu
         x: 145
         y: 201
         text: qsTr("Button")
-
-        Connections {
-            target: wyszukajTagu
-            onClicked: stronaGlowna.state = "tagRFID"
-        }
+        onClicked: stronaGlowna.state = "tagRFID"
     }
 
     Button {
@@ -4720,10 +5693,8 @@ Window {
         x: 391
         y: 201
         text: qsTr("Button")
-
-        Connections {
-            target: wyszukajTytule
-            onClicked: stronaGlowna.state = "tytul"
+        onClicked: {
+            stronaGlowna.state = "tytul"
         }
     }///////////////////////////////////////////////////////////////////////////////////////////
     Button {
@@ -4756,14 +5727,13 @@ Window {
         x: 255
         y: 380
         font.family: "Bruno Ace"
-        text: " "
+        text: ""
         font.pixelSize: 18
     }
     function enter(){
         var result = biblioteka.znajdzKsiazkeTag(tagRFID.text) // Wywołujemy metodę z klasy C++
         text1.text = result
         text1.visible = true
-        // Możesz tutaj dodać kod, który wyświetli zwrócony string na ekranie
     }
 
     Text {
@@ -4780,10 +5750,7 @@ Window {
         y: 145
         text: qsTr("cofnij")
         font.family: "Bruno Ace"
-        Connections {
-            target: cofinijDoGlownej1
-            onClicked: stronaGlowna.state = "mainPage"
-        }
+        onClicked: stronaGlowna.state = "mainPage"
     }
     Button {
         id: userPageMainPage
@@ -4792,6 +5759,8 @@ Window {
         visible: false
         text: qsTr("cofnij")
         font.family: "Bruno Ace"
+        onClicked: stronaGlowna.state = "mainPage"
+
         Connections {
             target: userPageMainPage
             onClicked: stronaGlowna.state = "mainPage"
@@ -4828,7 +5797,7 @@ Window {
         x: 224
         y: 375
         font.family: "Bruno Ace"
-        text: " "
+        text: ""
         font.pixelSize: 18
     }
 
@@ -4837,20 +5806,16 @@ Window {
         var result = biblioteka.znajdzKsiazkeTytul(tytul.text) // Wywołujemy metodę z klasy C++
         text2.text = result
         text2.visible = true
-        // Możesz tutaj dodać kod, który wyświetli zwrócony string na ekranie
     }
     Button {
         id: cofnijDoWyszukajPage
         x: 69
         y: 110
         text: qsTr("Button")
-
-        Connections {
-            target: cofnijDoWyszukajPage
-            onClicked: {
-                stronaGlowna.state = "userPage"
-                strona()
-            }
+        onClicked: {
+            if (ktorastrona=="user"){
+            stronaGlowna.state = "userPage"}
+            else stronaGlowna.state = "userPage1"
         }
     }
 
@@ -4859,12 +5824,9 @@ Window {
         x: 75
         y: 329
         text: qsTr("Button")
-        onClicked:
-        {
-            stronaGlowna.state = "userPage"
-            userPageAdminPage.visible = true
-            userPageMainPage.visible = false
-            ktorastrona = "admin"
+        Connections {
+            target: buttonWyszukaj
+            onClicked: stronaGlowna.state = "userPage1"
         }
     }
 
@@ -4873,18 +5835,24 @@ Window {
         x: 78
         y: 332
         text: qsTr("Button")
-    }
-
+        onClicked:
+        {
+            stronaGlowna.state = "wyswietlZawartosc"
+            if(ktorastrona=="user"){
+                wyswietlAdminPage.visible = false
+                wyswietlUserPage.visible = true
+            }
+            else {
+                wyswietlUserPage.visible = false
+                wyswietlAdminPage.visible = true
+            }
+    }}
     Button {
         id: buttonDodaj
         x: 79
         y: 333
         text: qsTr("Button")
-
-        Connections {
-            target: buttonDodaj
-            onClicked: stronaGlowna.state = "dodajPage"
-        }
+        onClicked: stronaGlowna.state = "dodajPage"
     }
 
     Button {
@@ -4892,11 +5860,7 @@ Window {
         x: 75
         y: 329
         text: qsTr("Button")
-
-        Connections {
-            target: buttonUsun
-            onClicked: stronaGlowna.state = "usunPage"
-        }
+        onClicked: stronaGlowna.state = "usunPage"
     }
     Text {
         id: gatunki
@@ -5020,10 +5984,9 @@ Window {
         x: 38
         y: 147
         text: qsTr("cofnij")
-
-        Connections {
-            target: cofnijDoDodajPage
-            onClicked: stronaGlowna.state = "dodajPage"
+        onClicked:
+        {
+            stronaGlowna.state = "dodajPage"
         }
     }
     TextField {
@@ -5143,7 +6106,9 @@ Window {
         y: 323
         text: qsTr("Button")
         onClicked:
+        {
             usunPlikKsiazek()
+        }
     }
 
     Button {
@@ -5152,7 +6117,9 @@ Window {
         y: 374
         text: qsTr("Button")
         onClicked:
+        {
             usunKsiazke()
+        }
     }
 
     Text {
@@ -5271,10 +6238,8 @@ Window {
         x: 12
         y: 87
         text: qsTr("Button")
-
-        Connections {
-            target: usunPage
-            onClicked: stronaGlowna.state = "adminPage"
+        onClicked: {
+            stronaGlowna.state = "adminPage"
         }
     }
 
@@ -5283,6 +6248,9 @@ Window {
         x: 18
         y: 59
         text: qsTr("Button")
+        onClicked: {
+            stronaGlowna.state = "adminPage"
+        }
 
         Connections {
             target: userPageAdminPage
@@ -5303,10 +6271,8 @@ Window {
         x: 12
         y: 48
         text: qsTr("Button")
-
-        Connections {
-            target: buttonDodajPage
-            onClicked: stronaGlowna.state = "adminPage"
+        onClicked:{
+            stronaGlowna.state = "adminPage"
         }
     }
 
@@ -5315,13 +6281,10 @@ Window {
         x: 18
         y: 59
         text: qsTr("Button")
-
-        Connections {
-            target: tagRF
-            onClicked: {
-                stronaGlowna.state = "userPage"
-                strona()
-            }
+        onClicked: {
+            if (ktorastrona == "user"){
+            stronaGlowna.state = "userPage"}
+            else stronaGlowna.state = "userPage1"
         }
     }
 
@@ -5334,16 +6297,105 @@ Window {
         ]
     }
 
+    SpinBox {
+        id: spinSzafa
+        x: 33
+        y: 407
+    }
 
+    SpinBox {
+        id: spinPolka
+        x: 43
+        y: 245
+    }
 
-    function strona(){
-        if(ktorastrona === "user"){
-            userPageMainPage.visible = true
-            userPageAdminPage.visible = false
+    SpinBox {
+        id: spinKsiazka
+        x: 43
+        y: 321
+    }
+
+    Text {
+        id: textSzafa
+        x: 43
+        y: 125
+        text: qsTr("Text")
+        font.pixelSize: 12
+    }
+
+    Text {
+        id: textPolka
+        x: 43
+        y: 212
+        text: qsTr("Text")
+        font.pixelSize: 12
+    }
+
+    Text {
+        id: textKsiazka
+        x: 43
+        y: 293
+        text: qsTr("Text")
+        font.pixelSize: 12
+    }
+    function wyswietlZaw(){
+        var listaKsiazek = biblioteka.wyswietlZawartosc(spinSzafa.value,spinPolka.value,spinKsiazka.value);
+        return listaKsiazek
+    }
+    ListView {
+        id: listView
+        x: 279
+        y: 152
+        width: 110
+        height: 160
+        visible: true
+        model: wyswietlZaw()
+        delegate: Text {
+            x: 5
+            width: 80
+            height: 40
+
+            Row {
+                id: row1
+                Rectangle {
+                    width: 10
+                    height: 10
+                    color: "black"
+                    radius: 3
+                }
+
+                Text {
+                    text: modelData
+                    anchors.verticalCenter: parent.verticalCenter
+                    font.family: "Bruno Ace"
+                    font.pixelSize: 13
+                }
+                spacing: 10
+            }
         }
-        else{
-            userPageAdminPage.visible = true
-            userPageMainPage.visible = false
+    }
+
+    Button {
+        id: wyswietlUserPage
+        x: 12
+        y: 64
+        text: qsTr("Button")
+
+        Connections {
+            target: wyswietlUserPage
+            onClicked: stronaGlowna.state = "userPage"
+        }
+    }
+
+    Button {
+        id: wyswietlAdminPage
+        x: 12
+        y: 64
+        text: qsTr("Button")
+
+        Connections {
+            target: wyswietlAdminPage
+            onClicked: stronaGlowna.state = "adminPage"
         }
     }
 
