@@ -25,8 +25,10 @@ public:
     //    }
 
     // Metoda do dodawania półek do szafy
-    void dodajPolke(const Polka& polka) {
-        polki.push_back(polka);
+    void dodajPolke(const Polka& polka, int pozycja) {
+        polki.insert(polki.begin()+pozycja-1, polka);
+        //polki.resize(pozycja,polka);
+        //polki.push_back(polka);
         cout << "~dodaje polke do szafy~" <<endl;
     }
     // Metoda do usuwania półek z szafy na podstawie numeru

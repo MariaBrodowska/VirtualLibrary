@@ -7,7 +7,7 @@
 #include <QObject>
 using namespace std;
 
- class Polka
+class Polka
 {
 
 public:
@@ -17,8 +17,8 @@ public:
     vector<Ksiazka> ksiazki;
     Polka(int numer)
         :numer(numer) {
-//        if (gatunek=="fantastyka") ilefantastyka++;
-//        if (gatunek=="horror") ilehorror++;
+        //        if (gatunek=="fantastyka") ilefantastyka++;
+        //        if (gatunek=="horror") ilehorror++;
     }
     //    Polka(const Polka& other)
     //        : numer(other.numer), gatunek(other.gatunek), ksiazki(other.ksiazki)
@@ -27,8 +27,11 @@ public:
     //        if (gatunek == "horror") ilehorror++;
     //    }
     // Dodanie książki na półkę
-    void dodajKsiazke(const Ksiazka& ksiazka) {
-        ksiazki.push_back(ksiazka);
+    void dodajKsiazke(const Ksiazka& ksiazka, int pozycja) {
+        ksiazki.insert(ksiazki.begin()+pozycja-1, ksiazka);
+        //ksiazki.resize(pozycja, ksiazka);
+        //ksiazki.push_back(ksiazka);
+        cout << "~dodaje ksiazke do polki~" << endl;
     }
 
     // Metoda do usuwania książek z półki na podstawie tytułu
@@ -51,6 +54,6 @@ public:
             cout << "- Tytul: " << ksiazka.tytul << ", Autor: " << ksiazka.autor << endl;
         }
     }
- };
+};
 
 #endif // POLKA_H

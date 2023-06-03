@@ -24,21 +24,36 @@ public:
     Q_INVOKABLE QString usunKsiazkeTag(int tagID);
     Q_INVOKABLE QString usunKsiazkeTytul(QString tytul,QString adres);
     Q_INVOKABLE QString usunKsiazkePlik(QString sciezka);
-    Q_INVOKABLE QStringList wyswietlZawartosc(int nrS, int nrP, int nrK);
+    Q_INVOKABLE QStringList wyswietlZawartosc(int nrS, int nrP, int nrK, int gat); //z
+    int tagID= 1001;
+    static int ileszaf[8];
+    static int ilepolek[8];
+    static int ileksiazek[8];
+    static int ileusunieto[8];
 signals:
    // void wynikChanged();
 public slots:
     Szafa& getSzafa(int numerSzafy);
     //Metoda do dodawania szafy do biblioteki
-    void dodajSzafe(const Szafa& szafa);
+    void dodajSzafe(const Szafa& szafa, int pozycja);
     string zamienNaMaleLitery(const string &wyraz);
     Gatunek convertToGatunek(const QString &qstr);
-    void dodajKsiazkiZPliku(const string& nazwaPliku, Gatunek gatunek,Biblioteka& biblioteka, Szafa& szafa,Polka& polka);
-private:
-    int tagID= 1001;
-    static int ileszaf[7];
-    static int ilepolek[7];
-    static int ileksiazek[7];
-    static int ileusunieto[7];
+    string qStringToString(QString z);
+    string GatunekToString(Gatunek g);
+    QString GatunekToQString(Gatunek g);
+    void dodajKsiazkiZPliku(string nazwaPliku, Gatunek gatunek);
+    void dodajZapis(string nazwaPliku, Gatunek gatunek);
+    void znajdzKsiazkeT(int tagID);
+    Gatunek intToGatunek(int g);
+    string wyswietlZawartoscDoZapisu(Gatunek gatunek);
+    void zapisWszystkich();
+    void zapisDoPliku(Gatunek gatunek);
+    void odczytWszystkich();
+//private:
+//    int tagID= 1001;
+//    static int ileszaf[8];
+//    static int ilepolek[8];
+//    static int ileksiazek[8];
+//    static int ileusunieto[8];
 };
 #endif // BIBLIOTEKA_H
