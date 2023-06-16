@@ -11,11 +11,8 @@ qt_standard_project_setup()
 qt_add_executable(appvlibrary
     main.cpp
     ksiazka.h
-    ksiazka.cpp
     polka.h
-    polka.cpp
     szafa.h
-    szafa.cpp
     biblioteka.h
     biblioteka.cpp
 )
@@ -23,13 +20,14 @@ qt_add_executable(appvlibrary
 qt_add_qml_module(appvlibrary
     URI vlibrary
     VERSION 1.0
-    QML_FILES Main.qml
+    QML_FILES
+        Main.qml
 )
 
 set_target_properties(appvlibrary PROPERTIES
-    MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
+    MACOSX_BUNDLE_GUI_IDENTIFIER "my.example.com"
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
-    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
+    MACOSX_BUNDLE_SHORT_VERSION_STRING "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}"
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
 )

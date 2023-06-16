@@ -1,9 +1,6 @@
 ﻿#include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
-#include "ksiazka.h"
-#include "polka.h"
-#include "szafa.h"
 #include "biblioteka.h"
 #include <iostream>
 #include <vector>
@@ -21,26 +18,20 @@ int main(int argc, char *argv[])
 
     biblioteka.odczytWszystkich();
 
-    //biblioteka.dodajKsiazkiZPliku("C:\\Users\\VivoBook\\Desktop\\VirtualLibrary\\vlibrary\\ksiazki.csv",kryminal);
     //biblioteka.dodajKsiazkiZPliku("C:\\Users\\VivoBook\\Desktop\\VirtualLibrary\\vlibrary\\ksiazki.csv",fantasy);
-
-    string tytul = "Kosiarze";
-    int tagID = 1280;
-    biblioteka.znajdzKsiazkeT(tagID);
+    //biblioteka.dodajKsiazkiZPliku("C:\\Users\\VivoBook\\Desktop\\VirtualLibrary\\vlibrary\\ksiazki.csv",horror);
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("Main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
         &app, [url](QObject *obj, const QUrl &objUrl) {
             if(!obj && url == objUrl)
-            QCoreApplication::exit(-1);},
+                QCoreApplication::exit(-1);},
         Qt::QueuedConnection);
     engine.load(url);
 
     QQmlContext * rootContext = engine.rootContext();
     rootContext->setContextProperty("biblioteka", &biblioteka);
-
-    //zapisWszystkich(biblioteka);
+    //biblioteka.zapisWszystkich();
     return app.exec();
 }
-

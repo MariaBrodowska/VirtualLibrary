@@ -10,33 +10,24 @@ using namespace std;
 class Szafa
 {
 
-public:
-    int numer;
+private:
+    int numer, numerWBibliotece;
     Gatunek gatunek;
     vector<Polka> polki;
-    // Konstruktor klasy Szafa
-    Szafa(int numer, Gatunek gatunek)
-        :numer(numer),gatunek(gatunek)
+    Szafa(int numer,int numerWBibliotece, Gatunek gatunek)
+        :numer(numer),numerWBibliotece(numerWBibliotece),gatunek(gatunek)
     {}
-    //    Szafa(const Szafa &other)
-    //        :numer(other.numer),gatunek(other.gatunek){
-    //        this->numer = other.numer;
-    //        this->gatunek = other.gatunek;
-    //    }
-
-    // Metoda do dodawania półek do szafy
     void dodajPolke(const Polka& polka, int pozycja) {
         polki.insert(polki.begin()+pozycja-1, polka);
         //polki.resize(pozycja,polka);
         //polki.push_back(polka);
         cout << "~dodaje polke do szafy~" <<endl;
     }
-    // Metoda do usuwania półek z szafy na podstawie numeru
     void usunPolke(int numer) {
-        for (auto it = polki.begin(); it != polki.end(); ++it) {
+        for (auto it = polki.begin(); it != polki.end(); it++) {
             if (it->numer == numer) {
-            polki.erase(it);
-            break;
+                polki.erase(it);
+                break;
             }
         }
     }
@@ -45,17 +36,10 @@ public:
             return polki[numerPolki - 1];
         }
         else {
-            throw std::out_of_range("Niepoprawny numer polki");
+            throw out_of_range("Niepoprawny numer polki");
         }
     }
-//    void wyswietlZawartosc(const Szafa& szafa) {
-//        cout << "Zawartosc szafy: " << numer << ":" << endl;
-//        for (const auto& polka : szafa.polki) {
-//            cout << "Polka " << polka.numer << ": ";
-//            for (const auto& ksiazka : polka.ksiazki){
-//            cout << "Tytul: " << ksiazka.tytul << ", Autor: " << ksiazka.autor << endl;
-//            }
-//        }}
+    friend class Biblioteka;
 };
 
 #endif // SZAFA_H
