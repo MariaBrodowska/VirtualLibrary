@@ -3,7 +3,7 @@ System wirtualnej biblioteki, która umożliwia użytkownikom wyszukiwanie dost�
 
 ### Panel użytkownika:
 - przeszukiwanie katalogu po tytule <br>
-<img src="readme_images/tytul.jpg"/>
+<img src="/readme_images/tytul.png"/>
 - przeszukiwanie katalogu po tagu RFID, który jest unikalnym identyfikatorem dla każdej książki
 - wyswietlanie zawartości biblioteki w postaci listy, z możliwością filtrowania (wzg. gatunku, numeru szafy/półki/książki)
 - wyświetlanie dokładnej lokalizacji książki w bibliotece
