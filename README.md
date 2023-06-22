@@ -1,13 +1,13 @@
 # VirtualLibrary
 System wirtualnej biblioteki, która umożliwia użytkownikom wyszukiwanie dostępności książek oraz sprawdzanie ich lokalizacji w rzeczywistej bibliotece. 
 
-##Panel użytkownika:
+### Panel użytkownika:
 - przeszukiwanie katalogu po tytule
 - przeszukiwanie katalogu po tagu RFID, który jest unikalnym identyfikatorem dla każdej książki
 - wyswietlanie zawartości biblioteki w postaci listy, z możliwością filtrowania (wzg. gatunku, numeru szafy/półki/książki)
 - wyświetlanie dokładnej lokalizacji książki w bibliotece
 
-##Panel administratora:
+### Panel administratora:
 - dodawanie książek pojedynczo/z pliku csv z możliwością wybrania gatunku
 - usuwanie książek po tytule i autorze/tagu RFID lub z podaniem pliku csv zawierającego listę książek do usunięcia
 
