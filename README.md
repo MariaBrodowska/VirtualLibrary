@@ -19,7 +19,7 @@ System wirtualnej biblioteki, która umożliwia użytkownikom wyszukiwanie dost�
 - usuwanie książek po tytule i autorze/tagu RFID lub z podaniem pliku csv zawierającego listę książek do usunięcia<br>
 <img src="/readme_images/usun.png"/> <br>
 
-## Instrukcja pierwszego usuchomienia programu
+## Instrukcja pierwszego uruchomienia programu
 - Zainstalować czcionkę z pliku "fonts\BrunoAce-Regular.ttf"<br>
 - Zmienić ścieżki do zapisu i odczytu plików stanu biblioteki w biblioteka.cpp w funkcjach: odczytWszystkich(), zapisDoPliku()<br>
 - Uruchomić wtyczke do obsługi qml: menu główne Qt > pomoc > informacje o wtyczkach > Qt Quick > QmlDesigner<br>
